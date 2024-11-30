@@ -1,6 +1,4 @@
-const callAPI =() => {
-    console.log("callAPI");
-    const mhh = "hf"
+const click =() => {
     const paragraph = document.getElementById("text-input");
     const text = paragraph.value;
     const output = document.getElementById("text-output");
