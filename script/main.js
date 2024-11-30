@@ -1,4 +1,5 @@
-const click =() => {
+const callAPI =() => {
+     console.log("callAPI")
     const paragraph = document.getElementById("text-input");
     const text = paragraph.value;
     const output = document.getElementById("text-output");
