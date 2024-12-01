@@ -1,5 +1,8 @@
-const callAPI =() => {
-     console.log("callAPI")
+import dotenv from 'dotenv'
+dotenv.config()
+
+const clicked =() => {
+   console.log("callAPI")
     const paragraph = document.getElementById("text-input");
     const text = paragraph.value;
     const output = document.getElementById("text-output");
@@ -8,7 +11,7 @@ const callAPI =() => {
             "https://api-inference.huggingface.co/models/facebook/bart-large-cnn",
             {
                 headers: {
-                    Authorization: "Bearer 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",
+                    Authorization: "Bearer "+ env.HAGAPI,
                     "Content-Type": "application/json",
                 },
                 method: "POST",
@@ -22,4 +25,4 @@ const callAPI =() => {
     query({inputs: text}).then((response) => {
         output.innerHTML = response[0]?.summary_text
     });
-};
+}; 
