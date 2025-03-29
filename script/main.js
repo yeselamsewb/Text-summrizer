@@ -6,9 +6,9 @@ const clicked =() => {
     const output = document.getElementById("text-output");
     const a = "h";
     const b = "f";
-    const c = "_KgclXlFztcpo";
-    const d = "cYTMqjgUkJlHx";
-    const e = "RWYKvpsMC";
+    const c = "_BTMDuuAqliBe";
+    const d = "bIVMaxHuuKw";
+    const e = "FQwOYTntUEp";
     async function query(data) {
         const response = await fetch(
             "https://api-inference.huggingface.co/models/facebook/bart-large-cnn",
