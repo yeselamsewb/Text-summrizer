@@ -9,27 +9,27 @@ const clicked =() => {
     const d = "bIVMaxHuuKw";
     const e = "FQwOYTntUEp";
 async function query(data) {
-    const response = await fetch(
-        "https://api.fireworks.ai/inference/v1/completions",
-        {
-            headers: {
-                Authorization: "Bearer " + a + b + c + d + e,
-                "Content-Type": "application/json",
-            },
-            method: "POST",
-            body: JSON.stringify({
-                model: "accounts/fireworks/models/llama-v3-8b-instruct",
-                prompt: data.inputs,
-                max_tokens: 200,
-                temperature: 0.7
-            }),
-        }
-    );
-    const result = await response.json();
-    return result;
-}
+        const response = await fetch(
+            "https://api.fireworks.ai/inference/v1/completions",
+            {
+                headers: {
+                    Authorization: "Bearer " + a + b + c + d + e,
+                    "Content-Type": "application/json",
+                },
+                method: "POST",
+                body: JSON.stringify({
+                    model: "accounts/fireworks/models/llama-v3-8b-instruct",
+                    prompt: data.inputs,
+                    max_tokens: 200,
+                    temperature: 0.7
+                }),
+            }
+        );
+        const result = await response.json();
+        return result;
+    }
 
-query({ inputs: text }).then((response) => {
-    output.innerHTML = response.choices?.[0]?.text || "No response";
-});
-
+    query({ inputs: text }).then((response) => {
+        output.innerHTML = response.choices?.[0]?.text || "No response";
+    });
+}; 
