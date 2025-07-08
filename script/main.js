@@ -33,4 +33,3 @@ query({ inputs: text }).then((response) => {
     output.innerHTML = response.choices?.[0]?.text || "No response";
 });
 
-
