@@ -11,7 +11,7 @@ const clicked =() => {
     const e = "FQwOYTntUEp";
     async function query(data) {
         const response = await fetch(
-            "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-72B-Instruct",
+            "https://api-inference.huggingface.co/models/meta-llama/Llama-3.1-8B-Instruct",
             {
                 headers: {
                     Authorization: "Bearer " + a + b + c + d + e ,
