@@ -8,7 +8,7 @@ const clicked =() => {
     const c = "_BTMDuuAqliBe";
     const d = "bIVMaxHuuKw";
     const e = "FQwOYTntUEp";
- async function query(data) {
+async function query(data) {
     const response = await fetch(
         "https://api.fireworks.ai/inference/v1/completions",
         {
@@ -32,4 +32,5 @@ const clicked =() => {
 query({ inputs: text }).then((response) => {
     output.innerHTML = response.choices?.[0]?.text || "No response";
 });
+
 
